@@ -4,3 +4,8 @@
 
 #include <iostream>
 #include "CalculoPrestamo.h"
+
+CalculoPrestamo::CalculoPrestamo(){};
+
+
+
