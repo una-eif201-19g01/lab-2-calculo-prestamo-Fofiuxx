@@ -1,37 +1,36 @@
-//
-// Created by Maikol Guzman  on 2019-08-08.
-//
-
 #ifndef CALCULOPRESTAMO_CALCULOPRESTAMO_H
 #define CALCULOPRESTAMO_CALCULOPRESTAMO_H
 
 
 #include <cstdint>
 #include <string>
+#include <string.h>
 
 class CalculoPrestamo {
-    float monto;
+		// atributos y metodos privados de la clase
+	float monto;
 
-    float obtenerPorcentaje(std::string porcentajeTXT);
+	float obtenerPorcentaje(std::string porcentajeTXT);
 
 
-int calcularTiempoEnMeses(std::string tiempoTXT);
+	int calcularTiempoEnMeses(std::string tiempoTXT);
 
-float calcularInteresesMensual(float balance, float tasaAnual);
-
+	float calcularInteresesMensual(float balance, float tasaAnual);
+	
+	// metodos publicos de la clase
 public:
-CalculoPrestamo();
+	CalculoPrestamo();
 
-CalculoPrestamo(int64_t monto);
+	explicit CalculoPrestamo(int64_t monto);
 
-std::string reporteCalculoPrestamo(std::string tiempoTXT, std::string
-porcentajeTXT);
+	std::string reporteCalculoPrestamo(std::string tiempoTXT, std::string
+		porcentajeTXT);
 
-float getMonto() {
-    return monto;
-};
+	//metodos set y get
 
-float setMonto(float monto);
+	float getMonto() const;
+
+	void setMonto(float monto);
 
 };
 
